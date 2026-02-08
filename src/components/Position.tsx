@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export const Position = () => {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
 
-  const moveLeft = () => setX(x => x - 1);
-  const moveRight = () => setX(x => x + 1);
-  const moveUp = () => setY(y => y - 1);
-  const moveDown = () => setY(y => y + 1);
+  const moveLeft = () => setX((x) => x - 1);
+  const moveRight = () => setX((x) => x + 1);
+  const moveUp = () => setY((y) => y - 1);
+  const moveDown = () => setY((y) => y + 1);
 
   const transformValue = `translate(${x * 100}%, ${y * 100}%)`;
 
@@ -21,7 +21,9 @@ export const Position = () => {
 
           <div>
             <button onClick={moveLeft}>&larr;</button>
-            <strong>{x}:{y}</strong>
+            <strong>
+              {x}:{y}
+            </strong>
             <button onClick={moveRight}>&rarr;</button>
           </div>
 
